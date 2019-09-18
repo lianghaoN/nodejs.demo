@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/wangding/node-demo/06-buffer/06-buffer'
+let g:netrw_dirhist_2='/home/wangding/node-demo/06-buffer'
+let g:netrw_dirhist_3='/home/wangding/node-demo/06-buffer/06-buffer'
+let g:netrw_dirhist_4='/'
+let g:netrw_dirhist_5='/home/wangding/node-demo/06-buffer/01-basic.js'
+let g:netrw_dirhist_6='/home/wangding/node-demo/.git'
