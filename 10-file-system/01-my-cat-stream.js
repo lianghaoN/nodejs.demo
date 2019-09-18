@@ -2,11 +2,16 @@
 
 const fs = require('fs'),
       file = process.argv[2] || __filename;
+try{
+  var source = fs.createReadStream(file);
 
-var source = fs.createReadStream(file);
+  source.pipe(process.stdout);
 
-source.pipe(process.stdout);
-
-source.on('error',function(err){
-  console.log(err.message);
-});
+  source.on('error',function(err){
+    console.log(err.message);
+  });
+}
+catch{
+  console.log(e.message);
+  process.exit(1);
+}
