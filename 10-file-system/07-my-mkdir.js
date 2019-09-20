@@ -3,4 +3,10 @@
 const fs  = require('fs'),
       dir = process.argv[2];
 
-fs.mkdirSync(dir);
+try{
+  fs.mkdirSync(dir);
+}catch(e){
+    console.log(e.message);
+      process.exit(1);
+
+}

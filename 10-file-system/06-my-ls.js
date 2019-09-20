@@ -2,5 +2,9 @@
 
 const fs  = require('fs'),
       dir = process.argv[2] || __filename;
-
-console.log(fs.readdirSync(dir));
+try{
+  console.log(fs.readdirSync(dir));
+}catch(e){
+  console.log(e.message);
+  process.exit(1);
+}

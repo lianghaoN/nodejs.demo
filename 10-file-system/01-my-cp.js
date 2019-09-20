@@ -7,5 +7,9 @@ const fs  = require('fs'),
 //src.pip(dst)
 //src = fs.createReadStream
 //dst = fs.createWriteStream
-
-fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+try{
+  fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+}catch(e){
+  console.log(e.message);
+  process.exit(1);
+}
