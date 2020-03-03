@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TOdo List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>TOdo List</h1>
+    <from method="POST" action='/'>
+    </from>
+    <ul><%- items.map(function(item){ return '<li>' + item + '</li>';  }).join('\n') %></ul>
+  </body>
+</html>
