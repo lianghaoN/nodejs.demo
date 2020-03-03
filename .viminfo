@@ -101,18 +101,21 @@ $
 	e
 
 # 文件标记:
-'0  26  26  ~/grunt-demo/index.html
-'1  10  40  ~/grunt-demo/Gruntfile.js
-'2  4  5  ~/grunt-demo/Gruntfile.js
-'3  11  1  ~/grunt-demo/Gruntfile.js
-'4  6  41  ~/grunt-demo/index.html
-'5  1  1  ~/grunt-demo/Gruntfile.js
-'6  1  1  ~/grunt-demo/Gruntfile.js
-'7  1  0  ~/grunt-demo/package
-'8  1  0  ~/grunt-demo/package.json
-'9  18  2  ~/grunt-demo/rectangle.js
+'0  2  8  ~/.gitignore
+'1  3  0  ~/.gitignore
+'2  26  26  ~/grunt-demo/index.html
+'3  10  40  ~/grunt-demo/Gruntfile.js
+'4  4  5  ~/grunt-demo/Gruntfile.js
+'5  11  1  ~/grunt-demo/Gruntfile.js
+'6  6  41  ~/grunt-demo/index.html
+'7  1  1  ~/grunt-demo/Gruntfile.js
+'8  1  1  ~/grunt-demo/Gruntfile.js
+'9  1  0  ~/grunt-demo/package
 
 # 跳转列表 (从新到旧):
+-'  2  8  ~/.gitignore
+-'  3  0  ~/.gitignore
+-'  1  0  ~/.gitignore
 -'  26  26  ~/grunt-demo/index.html
 -'  6  2  ~/grunt-demo/index.html
 -'  10  40  ~/grunt-demo/Gruntfile.js
@@ -208,11 +211,16 @@ $
 -'  3  9  ~/novel/README.md
 -'  1  0  ~/novel/README.md
 -'  3  33  ~/novel/ch02.md
--'  1  0  ~/novel/ch02.md
--'  3  45  ~/novel/ch01.md
--'  1  0  ~/novel/ch01.md
 
 # 文件内的标记历史记录 (从新到旧):
+
+> ~/.gitignore
+	"	2	8
+	^	2	9
+	.	2	8
+	+	2	12
+	+	3	0
+	+	2	8
 
 > ~/grunt-demo/index.html
 	"	26	26
