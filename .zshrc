@@ -88,3 +88,8 @@ export NVM_DIR="$HOME/.nvm"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lrd="browser-sync start --server --port 8080 --no-open --files ."
+alias pl="sudo firewall-cmd --zone=public --list-ports"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh"    ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+

@@ -7,159 +7,25 @@
 
 # hlsearch on (H) or off (h):
 ~h
-# Last Search Pattern:
-~MSle0~/缩进
-
-# Last Substitute Search Pattern:
-~MSle0&#
-
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :wq
+:set paste
 :q
-:'<,'>q
-:q!
-:q！
-:qw
-:gsl
-:quit
-:'<
-:qit
-:q                 // 退出 vim
-:q                 // vim 提示 Done 时，:q 退出安装界面
-:PluginInstall     // vim 的普通模式下，按冒号进入命令模式
-:exit
-:t
-:PluginInstall 
-:%s/stylish/Mocha/g
-:%s/Selenium IDE/Mocha/g
-:%s/SeleniumIDEDoc/selenium-ide-doc/g
-:%s/seIDE/selenium-ide-demo/g
-:!bash
-:bash
-:108,120 w a.txt
-:sp taskList.md
-:sp .tern-project
-:w index2.js
-:sp ~/.vimrc
-:%s/#/##/g
-:%s/b/now/g
-:5,5 w a.txt
-:sp ~/wd/log/2017/2017-04.md
-:%s/linuxbox/LAB/g
-:%s/me/wangding/g
-:%s/###/##/g
 :w
-:sp ../note/linux/centOS.md
-:!pwd
-:25,79 d
-:pwd
-:25,79 w a.txt
-:zsh
-:bn
-:Errors
-:source ~/.vimrc
-:SyntasticInfo
-:sp index.js
-:qa
-:sp ~/wd/log/2017/2017-01.md
-:sp ~/wd/note/linux/centOS.md
-:lopen
-:SyntasticCheck
-:echo syntastic#util#system('echo "$PATH"')
-:echo syntastic#util#system('echo "$PATH")
-:ls
-:CommandTFlush
-:CommandTBuffer
-:CommandT
-:PluginInstall
-:help command-t
-:ruby 1
-:ruby
-:commandT
-:sp ~/wd/note/office/vim.md
-:set foldmethod=indent
-:set fdm=marker
-:Error
-:SyntasticCheck jslint
-:SyntasticCheck index.js jslint
-:Syntastic index.js jslint
-:lclose
-:SyntaticInfo
-:help syntastic
-:Helptags
-:sp ../info-theory-lab-c/capacity/capacity.c
-:sp wd/note/office/vim.md
-:imap <F2> <ESC>A;<CR>
-:map <F2> bi{<ESC>ea}<ESC>
-:map <F2> i{<ESC>ea]<ESC>
-:ma
-:scurce ~/.vimrc
-:sp ~/wd/log/2017/2017-03.md
-:%s/noremap/nmap/g
-:%s/nnoremap/noremap/g
-:%s/nnoremap/nmap/g
-:%s/Github /GitHub /g
-:%s/Github/GitHub/g
-:reg
-://www.jinbuguo.com/gui/fonts.conf.html
-:sp a.c
-:%s/%f/%f\\n/g
-:%s/%f/%f\n/g
+:wq\
+:q:w
+:'
+:Wq
+:.ll
+:'<,'>q
+:q！
+:q!
 
 # Search String History (newest to oldest):
 ? \$\(cursor\|select\)\$
-?// 输入 PluginInstall 命令，注意命令的大小写
-? ^\.\.\=/$
-?/打算
-? stylish
-? Selenium IDE
-?/README
-? SeleniumIDEDoc
-? seIDE
-?/缩进
-?/slice
-?/fire
-? #
-?/100%
-?/tar
-?/sele
-? b
-?/b
-? linuxbox
-? me
-? ###
-?/sudoer
-?/passwd
-?/nmt
-?/git
-?/prompt
-?/histsize
-?/HIST
-?/jsli
-?/npm
-?/tern
-?/synta
-?/nmtui
-?/光标
-?/j
-? noremap
-? nnoremap
-? Github 
-? Github
-?/nn
-?/node
-?/selenium
-?/seleniu
-?/log
-?/main
-?/Capacity
-? %f
-?/status
-?/主机
-?/vuji
 
 # Expression History (newest to oldest):
 
@@ -169,1938 +35,1238 @@ $
 
 # 寄存器:
 "0	CHAR	0
-	console.log(data.toString('utf8'));
-	
-""1	LINE	0
-	      dst = process.argv[3];
-	
-	fs.renameSync(src,dst);
-"2	LINE	0
-	
-	//src.pip(dst)
-	//src = fs.createReadStream
-	//dst = fs.createWriteStream
-	
-	fs.createReadStream(src).pipe(fs.createWriteStream(dst));
-"3	LINE	0
-	
-	const fid = fs.openSync(file,'r');
-	
-	console.log(fs.readFileSync(fid).toString('utf8'));
-	
-	fs.closeSync(fid);
-	
-	
-"4	LINE	0
-	const fid = fs.openSync(file,'r');
-	
-	console.log(fs.readFileSync(fid).toString('utf8'));
-	
-	fs.closeSync(fid);
-	
-	
-"5	CHAR	0
-	  var self = this;
-	
-"6	CHAR	0
-	    'play':[fn1.fn2,fn3],
-	    'stop':[]
-	
-"7	CHAR	0
-	
-	
-	const EventEmitter = require('events').EventEmitter,
-	      util = require('util');
-	
-"8	CHAR	0
-	const EventEmitter = require('events').EventEmitter;
-	
-	function Dog(name,energy){
-	  var _name,_energy;
-	  var that = this;
-	
-	  EventEmitter.call(this);
-	
-	  _name = name;
-	  _energy = energy;
-	
-	  var timer = setInterval(()=>{
-	    if(energy>0){
-	      that.emit('back');
-	      energy--;
-	    } else {
-	      clearInterval(timer);
+	0
+"1	LINE	0
+	module.exports = function (grunt) {
+	  grunt.initConfig({
+	    cssmin: {  
+	      'rectangle.min.css': 'rectangle.css'
 	    }
-	  },1000);
+	  });
 	
-	  this.name = () => _name;
-	  this.energy = () => _energy;
-	}
+	  grunt.loadNpmTasks('grunt-contrib-cssmin');
 	
-	Dog.prototype=EventEmitter.prototype;
-	
-	module.exports = Dog;
-"9	CHAR	0
-	energy());
+	  grunt.registerTask('default', ['cssmin']); 
 	};
-"-	CHAR	0
-	;
+"2	LINE	0
+	module.exports = function (grunt) {
+	  grunt.initConfig({
+	    htmlmin: {
+	      options: {
+	        collapseWhitespace: true,
+	        preserveLineBreaks: false
+	      },
+	      files: {
+	        src: './index.html',
+	        dest: 'dist/index.html'
+	      }
+	    }
+	  });
+	
+	  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	
+	  grunt.registerTask('default', ['htmlmin']); 
+	};
+"3	LINE	0
+	module.exports = function (grunt) {
+	  grunt.initConfig({
+	    mocha: {
+	      test: {
+	        rec: ['test/index.html'] 
+	      },
+	      options:{
+	        run: true,
+	        reportor: 'Dot'
+	      }
+	    }
+	  });
+	
+	  grunt.loadNpmTasks('grunt-mocha');
+	
+	  grunt.registerTask('default', [,'mocha']);
+	};
+"4	LINE	0
+	    "mocha": "^7.1.0"
+"5	LINE	0
+	    "grunt": ">=0.4.5",
+"6	LINE	0
+	    "grunt-mocha": "^0.4.12"
+"7	LINE	0
+	    "mocha": "^7.1.0"
+"8	LINE	0
+	    "grunt-eslint": "^22.0.0",
+"9	LINE	0
+	    "grunt": "^1.0.4",
+""-	CHAR	0
+	e
 
 # 文件标记:
-'0  6  19  ~/node-demo/10-file-system/04-my-rm.js
-'1  7  22  ~/node-demo/10-file-system/03-my-mv.js
-'2  11  52  ~/node-demo/10-file-system/01-my-cp.js
-'3  10  17  ~/node-demo/10-file-system/01-my-cat-sync.js
-'4  11  25  ~/node-demo/10-file-system/01-my-cat-stream.js
-'5  6  46  ~/node-demo/10-file-system/01-my-cat-stream.js
-'6  12  0  ~/node-demo/10-file-system/01-my-cat-mix.js
-'7  11  0  ~/node-demo/10-file-system/01-my-cat-mix.js
-'8  17  15  ~/node-demo/10-file-system/01-my-cat-lower.js
-'9  6  1  ~/node-demo/10-file-system/01-my-cat-lower.js
+'0  26  26  ~/grunt-demo/index.html
+'1  10  40  ~/grunt-demo/Gruntfile.js
+'2  4  5  ~/grunt-demo/Gruntfile.js
+'3  11  1  ~/grunt-demo/Gruntfile.js
+'4  6  41  ~/grunt-demo/index.html
+'5  1  1  ~/grunt-demo/Gruntfile.js
+'6  1  1  ~/grunt-demo/Gruntfile.js
+'7  1  0  ~/grunt-demo/package
+'8  1  0  ~/grunt-demo/package.json
+'9  18  2  ~/grunt-demo/rectangle.js
 
 # 跳转列表 (从新到旧):
--'  6  19  ~/node-demo/10-file-system/04-my-rm.js
--'  7  0  ~/node-demo/10-file-system/04-my-rm.js
--'  1  0  ~/node-demo/10-file-system/04-my-rm.js
--'  7  22  ~/node-demo/10-file-system/03-my-mv.js
--'  8  0  ~/node-demo/10-file-system/03-my-mv.js
--'  1  0  ~/node-demo/10-file-system/03-my-mv.js
--'  11  52  ~/node-demo/10-file-system/01-my-cp.js
--'  12  0  ~/node-demo/10-file-system/01-my-cp.js
--'  1  0  ~/node-demo/10-file-system/01-my-cp.js
--'  10  17  ~/node-demo/10-file-system/01-my-cat-sync.js
--'  12  0  ~/node-demo/10-file-system/01-my-cat-sync.js
--'  1  0  ~/node-demo/10-file-system/01-my-cat-sync.js
--'  11  25  ~/node-demo/10-file-system/01-my-cat-stream.js
--'  6  0  ~/node-demo/10-file-system/01-my-cat-stream.js
--'  1  0  ~/node-demo/10-file-system/01-my-cat-stream.js
--'  12  0  ~/node-demo/10-file-system/01-my-cat-mix.js
--'  11  0  ~/node-demo/10-file-system/01-my-cat-mix.js
--'  1  0  ~/node-demo/10-file-system/01-my-cat-mix.js
--'  17  15  ~/node-demo/10-file-system/01-my-cat-lower.js
--'  6  2  ~/node-demo/10-file-system/01-my-cat-lower.js
--'  14  0  ~/node-demo/10-file-system/01-my-cat-lower.js
--'  1  0  ~/node-demo/10-file-system/01-my-cat-lower.js
--'  12  2  ~/node-demo/10-file-system/01-my-cat-async.js
--'  1  0  ~/node-demo/10-file-system/01-my-cat-async.js
--'  15  28  ~/node-demo/09-stream/04-green-stream.js
--'  12  2  ~/node-demo/09-stream/04-green-stream.js
--'  9  0  ~/node-demo/09-stream/04-main.js
--'  13  2  ~/node-demo/09-stream/04-green-stream.js
--'  1  0  ~/node-demo/09-stream/04-main.js
--'  1  0  ~/node-demo/09-stream/04-green-stream.js
--'  7  22  ~/node-demo/09-stream/03-main.js
--'  16  0  ~/node-demo/09-stream/03-my-readable.js
--'  8  0  ~/node-demo/09-stream/03-my-readable.js
--'  10  0  ~/node-demo/09-stream/03-my-readable.js
--'  12  0  ~/node-demo/09-stream/03-my-readable.js
--'  1  0  ~/node-demo/09-stream/03-main.js
--'  1  0  ~/node-demo/09-stream/03-my-readable.js
--'  6  39  ~/node-demo/09-stream/02-static-web-server.js
--'  12  0  ~/node-demo/09-stream/02-static-web-server.js
--'  9  2  ~/node-demo/09-stream/02-static-web-server.js
--'  1  0  ~/node-demo/09-stream/02-static-web-server.js
--'  13  0  ~/node-demo/09-stream/02-static-web-server.js
--'  15  0  ~/node-demo/09-stream/03-readable-pull.js
--'  10  2  ~/node-demo/09-stream/03-readable-pull.js
--'  5  0  ~/node-demo/09-stream/03-readable-pull.js
--'  1  0  ~/node-demo/09-stream/03-readable-pull.js
--'  5  12  ~/node-demo/09-stream/03-readable-push.js
--'  11  0  ~/node-demo/09-stream/03-readable-push.js
--'  1  0  ~/node-demo/09-stream/03-readable-push.js
--'  13  0  ~/node-demo/09-stream/02-static-web-server-stream.js
--'  7  2  ~/node-demo/09-stream/02-static-web-server.js
--'  11  2  ~/node-demo/09-stream/02-static-web-server-stream.js
--'  21  0  ~/node-demo/09-stream/03-readable-push.js
--'  1  0  ~/node-demo/09-stream/02-static-web-server-stream.js
--'  14  2  ~/node-demo/09-stream/02-static-web-server.js
--'  15  0  ~/node-demo/09-stream/02-static-web-server.js
--'  10  2  ~/node-demo/09-stream/02-static-web-server.js
--'  3  6  ~/node-demo/09-stream/02-static-web-server.js
--'  12  0  ~/node-demo/09-stream/01-std-io.js
--'  1  0  ~/node-demo/09-stream/01-std-io.js
--'  32  18  ~/node-demo/08-event/05-radio.js
--'  6  0  ~/node-demo/08-event/05-radio.js
--'  20  0  ~/node-demo/08-event/05-listen-radio.js
--'  3  0  ~/node-demo/08-event/05-listen-radio.js
--'  5  2  ~/node-demo/08-event/05-radio.js
--'  22  4  ~/node-demo/08-event/05-radio.js
--'  35  0  ~/node-demo/08-event/05-radio.js
--'  1  0  ~/node-demo/08-event/05-radio.js
--'  1  0  ~/node-demo/08-event/05-listen-radio.js
--'  1  0  ~/node-demo/.git
--'  2  22  ~/node-demo/.gitignore
--'  1  0  ~/node-demo/.gitignore
--'  35  20  ~/node-demo/08-event/02-dog.js
--'  2  0  ~/node-demo/08-event/02-dog.js
--'  12  1  ~/node-demo/08-event/02-play-dog.js
--'  1  168  ~/node-demo/08-event/02-play-dog.js
--'  10  4  ~/node-demo/08-event/01-event-emitter.js
--'  2  0  ~/node-demo/08-event/01-event-emitter.js
--'  3  0  ~/node-demo/08-event/01-event-emitter.js
--'  10  8  ~/node-demo/08-event/04-radio.js
--'  1  0  ~/node-demo/08-event/04-listen-radio.js
--'  1  0  ~/node-demo/08-event/04-radio.js
--'  3  27  ~/node-demo/08-event/03-listen-radio.js
--'  19  2  ~/node-demo/08-event/03-listen-radio.js
--'  12  20  ~/node-demo/08-event/03-radio.js
--'  16  4  ~/node-demo/08-event/03-radio.js
--'  11  0  ~/node-demo/08-event/03-listen-radio.js
--'  1  0  ~/node-demo/08-event/03-listen-radio.js
--'  2  0  ~/node-demo/08-event/03-radio.js
--'  1  0  ~/node-demo/08-event/03-radio.js
--'  1  0  ~/node-demo/08-event/02-dog.js
--'  21  0  ~/node-demo/08-event/01-event-emitter.js
--'  13  0  ~/node-demo/08-event/01-event-emitter.js
--'  1  0  ~/node-demo/08-event/01-event-emitter.js
--'  4  0  ~/node-demo/07-module/02-export-var.js
--'  19  23  ~/node-demo/07-module/02-export-function.js
--'  13  4  ~/node-demo/07-module/02-export-function.js
--'  3  0  ~/node-demo/07-module/02-export-object.js
--'  23  0  ~/node-demo/07-module/02-main.js
+-'  26  26  ~/grunt-demo/index.html
+-'  6  2  ~/grunt-demo/index.html
+-'  10  40  ~/grunt-demo/Gruntfile.js
+-'  4  6  ~/grunt-demo/Gruntfile.js
+-'  11  0  ~/grunt-demo/Gruntfile.js
+-'  1  2  ~/grunt-demo/Gruntfile.js
+-'  28  0  ~/grunt-demo/index.html
+-'  1  0  ~/grunt-demo/package
+-'  1  0  ~/grunt-demo/package.json
+-'  18  2  ~/grunt-demo/rectangle.js
+-'  1  0  ~/grunt-demo/rectangle.js
+-'  16  0  ~/grunt-demo/rectangle.css
+-'  1  0  ~/grunt-demo/rectangle.css
+-'  1  0  ~/grunt-demo/index.html
+-'  24  0  ~/grunt-demo/package.json
+-'  1  0  ~/grunt-demo/\
+-'  30  1  ~/grunt-demo/Gruntfile.js
+-'  18  4  ~/grunt-demo/Gruntfile.js
+-'  29  59  ~/grunt-demo/Gruntfile.js
+-'  21  16  ~/grunt-demo/Gruntfile.js
+-'  14  10  ~/grunt-demo/Gruntfile.js
+-'  25  6  ~/grunt-demo/Gruntfile.js
+-'  30  17  ~/grunt-demo/package.json
+-'  49  0  ~/grunt-demo/package.json
+-'  13  44  ~/grunt-demo/test/app.test.js
+-'  15  6  ~/grunt-demo/test/app.test.js
+-'  14  8  ~/grunt-demo/test/app.test.js
+-'  44  4  ~/grunt-demo/package.json
+-'  33  4  ~/grunt-demo/package.json
+-'  1  0  ~/grunt-demo/test/app.test.js
+-'  26  0  ~/grunt-demo/app.js
+-'  1  0  ~/grunt-demo/app.js
+-'  38  2  ~/grunt-demo/package.json
+-'  1  0  ~/grunt-demo/package.
+-'  7  19  ~/grunt-demo/util.js
+-'  10  0  ~/grunt-demo/util.js
+-'  1  4  ~/grunt-demo/test/util.test.js
+-'  6  4  ~/grunt-demo/test/util.test.js
+-'  40  8  ~/grunt-demo/rectangle.js
+-'  45  4  ~/grunt-demo/package.json
+-'  15  25  ~/grunt-demo/test/index.html
+-'  1  0  ~/grunt-demo/test/index.html
+-'  52  34  ~/grunt-demo/index.html
+-'  44  2  ~/grunt-demo/index.html
+-'  1  0  ~/grunt-demo/rectangle.h
+-'  1  0  ~/grunt-demo/util.js
+-'  39  43  ~/grunt-demo/rectangle.js
+-'  35  0  ~/grunt-demo/rectangle.js
+-'  41  4  ~/grunt-demo/rectangle.js
+-'  42  0  ~/grunt-demo/rectangle.js
+-'  43  93  ~/grunt-demo/rectangle.js
+-'  25  8  ~/grunt-demo/rectangle.js
+-'  20  4  ~/grunt-demo/rectangle.js
+-'  21  7  ~/grunt-demo/rectangle.js
+-'  1  0  ~/grunt-demo/.tern-project
+-'  1  0  test/calc.test.js
+-'  15  40  ~/grunt-demo/test/calc.test.js
+-'  11  4  ~/grunt-demo/test/calc.test.js
+-'  3  13  ~/grunt-demo/calc.js
+-'  10  2  ~/grunt-demo/test/calc.test.js
+-'  17  0  ~/grunt-demo/test/calc.test.js
+-'  8  0  ~/grunt-demo/calc.js
+-'  40  22  ~/grunt-demo/package.json
+-'  41  2  ~/grunt-demo/package.json
+-'  1  0  ~/grunt-demo/test/calc.test.js
+-'  13  2  ~/grunt-demo/test/calc.test,js
+-'  1  0  ~/grunt-demo/test/calc.test,js
+-'  12  31  ~/grunt-demo/sun.js
+-'  14  0  ~/grunt-demo/sun.js
+-'  1  0  ~/grunt-demo/calc.js
+-'  1  0  ~/grunt-demo/sun.js
+-'  1  0  ~/grunt-demo/.gitignore
+-'  24  9  ~/grunt-demo/.eslintrc.json
+-'  18  12  ~/grunt-demo/.eslintrc.json
+-'  19  0  ~/grunt-demo/rectangle.js
+-'  1  0  ~/grunt-demo/.eslintrc.json
+-'  5  26  ~/novel/SUMMARY.md
+-'  4  0  ~/novel/SUMMARY.md
+-'  3  57  ~/novel/cho4.md
+-'  1  0  ~/novel/cho4.md
+-'  15  0  ~/novel/.git/COMMIT_EDITMSG
+-'  9  0  ~/novel/.git/COMMIT_EDITMSG
+-'  1  0  ~/novel/.gitignore
+-'  15  16  ~/novel/package.json
+-'  6  2  ~/novel/package.json
+-'  7  4  ~/novel/package.json
+-'  17  11  ~/novel/.travis.yml
+-'  1  0  ~/novel/.travis.yml
+-'  3  0  ~/novel/SUMMARY.md
+-'  3  57  ~/novel/ch03.md
+-'  1  0  ~/novel/ch03.md
+-'  1  0  ~/novel/SUMMARY.md
+-'  3  9  ~/novel/README.md
+-'  1  0  ~/novel/README.md
+-'  3  33  ~/novel/ch02.md
+-'  1  0  ~/novel/ch02.md
+-'  3  45  ~/novel/ch01.md
+-'  1  0  ~/novel/ch01.md
 
 # 文件内的标记历史记录 (从新到旧):
 
-> ~/node-demo/10-file-system/04-my-rm.js
-	"	6	19
-	^	6	20
-	.	6	19
-	+	7	0
-	+	4	29
-	+	6	19
-
-> ~/node-demo/10-file-system/03-my-mv.js
-	"	7	22
-	^	7	23
-	.	7	23
-	+	8	0
-	+	4	8
-	+	7	14
-	+	4	8
-	+	5	8
-	+	4	8
-	+	7	23
-
-> ~/node-demo/10-file-system/01-my-cp.js
-	"	11	52
-	^	11	53
-	.	11	52
-	+	12	0
-	+	6	0
-	+	4	8
-	+	3	9
-	+	4	54
-	+	4	27
-	+	11	56
-	+	7	14
-	+	10	0
-	+	11	52
-
-> ~/node-demo/10-file-system/01-my-cat-sync.js
-	"	10	17
-	^	10	18
-	.	10	17
-	+	12	0
-	+	6	51
-	+	5	0
-	+	12	0
-	+	6	24
-	+	8	0
-	+	7	1
-	+	9	38
-	+	10	17
-
-> ~/node-demo/10-file-system/01-my-cat-stream.js
-	"	11	25
-	^	11	26
-	.	12	2
-	+	2	0
-	+	3	25
-	+	4	43
-	+	6	39
-	+	10	32
-	+	11	26
-	+	12	2
-
-> ~/node-demo/10-file-system/01-my-cat-mix.js
-	"	12	0
-	^	12	0
-	.	11	0
+> ~/grunt-demo/index.html
+	"	26	26
+	^	26	27
+	.	26	26
 	+	1	15
-	+	3	25
-	+	4	43
-	+	6	34
-	+	8	51
-	+	10	18
-	+	11	0
-
-> ~/node-demo/10-file-system/01-my-cat-lower.js
-	"	17	15
-	^	17	19
-	.	17	15
-	+	20	0
-	+	3	25
-	+	4	43
-	+	8	32
-	+	10	29
-	+	12	34
-	+	14	17
-	+	5	4
-	+	16	9
-	+	18	17
-	+	14	1
-	+	12	1
-	+	10	1
-	+	8	5
-	+	7	5
-	+	6	1
-	+	17	15
-
-> ~/node-demo/10-file-system/01-my-cat-async.js
-	"	12	2
-	^	12	3
-	.	13	0
-	+	2	0
-	+	3	25
-	+	4	43
-	+	6	36
-	+	12	39
-	+	8	30
-	+	9	19
-	+	11	0
-	+	11	36
-	+	13	0
-
-> ~/node-demo/09-stream/04-green-stream.js
-	"	15	28
-	^	12	58
-	.	12	57
-	+	2	0
-	+	3	41
-	+	5	23
-	+	9	24
-	+	3	6
-	+	15	28
-	+	6	18
-	+	11	42
-	+	11	42
-	+	11	42
-	+	15	0
-	+	11	65
-	+	12	71
-	+	13	13
-	+	12	57
-
-> ~/node-demo/09-stream/04-main.js
-	"	9	0
-	^	9	14
-	.	9	13
-	+	2	0
-	+	3	52
-	+	6	26
-	+	8	15
-	+	9	13
-
-> ~/node-demo/09-stream/03-main.js
-	"	7	22
-	^	7	23
-	.	7	22
-	+	2	0
-	+	3	50
-	+	5	25
-	+	7	22
-
-> ~/node-demo/09-stream/03-my-readable.js
-	"	16	0
-	^	16	0
-	.	16	0
-	+	2	0
-	+	3	40
-	+	5	22
-	+	18	27
-	+	6	18
-	+	8	34
-	+	8	27
-	+	8	46
-	+	13	40
-	+	14	43
-	+	8	56
-	+	16	0
-	+	11	0
-	+	8	28
-	+	11	0
-	+	13	2
-	+	14	2
-	+	15	0
-	+	11	0
-	+	7	0
-	+	8	0
-	+	11	0
-	+	8	0
-	+	12	43
-	+	12	41
-	+	10	1
-	+	8	35
-	+	16	0
-	+	16	0
-
-> ~/node-demo/09-stream/02-static-web-server.js
-	"	6	39
-	^	6	40
-	.	6	39
-	+	9	22
-	+	10	52
-	+	10	13
-	+	3	25
-	+	10	10
-	+	3	20
-	+	10	18
-	+	10	75
-	+	10	75
-	+	14	0
-	+	14	49
-	+	7	22
-	+	12	25
-	+	13	0
-	+	9	35
+	+	42	0
+	+	52	33
+	+	28	7
 	+	6	39
+	+	26	26
 
-> ~/node-demo/09-stream/03-readable-pull.js
-	"	15	0
-	^	10	28
-	.	10	28
-	+	2	0
-	+	3	40
-	+	5	19
-	+	6	0
-	+	7	25
-	+	8	16
-	+	9	35
-	+	10	24
-	+	14	0
-	+	5	12
-	+	10	28
-
-> ~/node-demo/09-stream/03-readable-push.js
-	"	5	12
-	^	5	13
-	.	5	12
-	+	2	0
-	+	2	0
-	+	12	25
-	+	13	48
-	+	15	28
-	+	16	467
+> ~/grunt-demo/Gruntfile.js
+	"	10	40
+	^	4	6
+	.	10	40
+	+	1	17
+	+	1	41
+	+	1	11
+	+	1	40
+	+	1	42
+	+	1	16
+	+	1	16
+	+	1	7
+	+	1	30
+	+	1	36
+	+	1	6
+	+	1	35
+	+	1	15
+	+	1	15
+	+	1	24
+	+	1	0
+	+	1	38
+	+	1	32
+	+	1	8
+	+	1	9
+	+	1	29
+	+	1	0
+	+	1	4
+	+	1	6
+	+	1	5
+	+	1	21
+	+	1	0
+	+	1	35
+	+	30	0
+	+	29	51
+	+	18	9
+	+	19	9
+	+	19	48
+	+	20	15
+	+	23	5
+	+	21	20
+	+	1	19
+	+	1	1
+	+	1	5
+	+	12	7
+	+	13	9
+	+	14	11
+	+	15	11
+	+	16	9
+	+	17	7
+	+	18	7
+	+	19	9
+	+	19	30
+	+	19	11
+	+	19	70
+	+	20	7
+	+	20	32
+	+	21	11
 	+	20	11
-	+	21	0
-	+	2	0
-	+	3	40
-	+	7	21
-	+	8	20
-	+	9	16
-	+	11	23
-	+	5	19
-	+	7	0
-	+	8	0
-	+	9	0
-	+	11	0
-	+	5	12
-
-> ~/node-demo/09-stream/02-static-web-server-stream.js
-	"	13	0
-	^	13	25
-	.	13	24
-	+	6	37
-	+	7	0
-	+	10	41
-	+	11	6
-	+	14	0
-	+	11	18
-	+	13	24
-
-> ~/node-demo/09-stream/01-std-io.js
-	"	12	0
-	^	12	0
-	.	12	0
-	+	2	0
-	+	6	15
-	+	8	31
-	+	10	2
-	+	9	7
-	+	5	0
-	+	4	29
-	+	9	49
-	+	12	26
-	+	12	40
-	+	12	30
-	+	12	28
-	+	12	26
-	+	12	0
-
-> ~/node-demo/08-event/05-radio.js
-	"	32	18
-	^	32	13
-	.	32	12
+	+	23	11
+	+	24	7
+	+	25	5
+	+	27	33
+	+	28	39
+	+	1	0
+	+	1	0
+	+	13	1
+	+	14	1
 	+	15	1
-	+	4	0
-	+	2	0
-	+	3	0
-	+	6	0
-	+	5	18
-	+	5	43
-	+	5	30
-	+	6	0
-	+	5	18
-	+	8	0
-	+	8	0
-	+	9	4
-	+	13	4
-	+	35	4
-	+	35	16
-	+	35	20
-	+	35	24
-	+	36	0
-	+	15	0
-	+	16	25
-	+	17	46
-	+	18	46
-	+	19	19
-	+	23	23
-	+	24	5
-	+	27	21
-	+	28	42
-	+	29	25
-	+	32	28
-	+	24	5
-	+	22	28
-	+	6	0
-	+	32	12
-
-> ~/node-demo/08-event/05-listen-radio.js
-	"	20	0
-	^	3	27
-	.	3	26
+	+	16	1
+	+	19	20
+	+	20	22
+	+	21	1
+	+	25	1
+	+	29	1
+	+	28	1
+	+	27	3
+	+	25	3
+	+	21	3
+	+	20	24
+	+	19	22
+	+	15	3
+	+	14	15
+	+	15	15
+	+	19	34
+	+	20	36
+	+	21	15
+	+	18	15
+	+	21	29
+	+	21	32
+	+	22	24
+	+	19	29
+	+	29	59
+	+	18	0
+	+	29	50
+	+	1	35
+	+	1	35
+	+	11	0
+	+	4	19
+	+	4	52
 	+	3	26
+	+	3	18
+	+	5	0
+	+	4	6
+	+	10	40
+
+> ~/grunt-demo/package
+	"	1	0
+
+> ~/grunt-demo/package.json
+	"	1	0
+	^	24	1
+	.	24	0
+	+	45	0
+	+	45	0
+	+	30	55
+	+	45	0
+	+	30	17
+	+	40	22
+	+	45	0
+	+	45	24
+	+	45	30
+	+	45	4
+	+	45	4
+	+	30	17
+	+	33	18
+	+	45	0
+	+	44	19
+	+	30	17
+	+	48	0
+	+	47	24
+	+	24	0
+
+> ~/grunt-demo/rectangle.js
+	"	18	2
+	^	18	3
+	.	18	3
+	+	1	19
+	+	28	6
+	+	1	9
+	+	1	17
+	+	20	60
+	+	23	1
+	+	24	2
+	+	25	2
+	+	26	2
+	+	27	2
+	+	30	2
+	+	32	3
+	+	33	4
+	+	35	4
+	+	39	4
+	+	41	4
+	+	42	4
+	+	43	2
+	+	22	0
+	+	29	1
+	+	22	1
+	+	31	1
+	+	34	2
+	+	40	0
+	+	44	2
+	+	34	1
+	+	40	1
+	+	21	3
+	+	22	4
+	+	23	4
+	+	24	4
+	+	25	4
+	+	26	4
+	+	28	1
+	+	29	4
+	+	30	4
+	+	31	4
+	+	32	4
+	+	33	4
+	+	34	4
+	+	35	4
+	+	39	4
+	+	40	4
+	+	41	4
+	+	42	4
+	+	44	34
+	+	44	94
+	+	31	3
+	+	32	4
+	+	34	4
+	+	33	4
+	+	35	5
+	+	39	3
+	+	40	4
+	+	41	5
+	+	42	4
+	+	43	2
+	+	33	2
+	+	39	5
+	+	42	0
+	+	1	9
+	+	44	0
+	+	34	8
+	+	35	24
+	+	37	31
+	+	39	0
+	+	40	40
+	+	41	30
+	+	40	43
+	+	34	0
+	+	19	22
+	+	40	36
+	+	18	3
+
+> ~/grunt-demo/rectangle.css
+	"	16	0
+	^	16	1
+	.	16	0
+	+	19	14
+	+	17	17
+	+	18	0
+	+	19	14
+	+	23	20
+	+	24	9
+	+	28	16
+	+	31	0
+	+	16	0
+
+> ~/grunt-demo/\
+	"	1	0
+
+> ~/grunt-demo/test/app.test.js
+	"	13	44
+	^	13	45
+	.	13	44
+	+	1	38
+	+	18	0
+	+	12	39
+	+	13	44
+	+	15	8
+	+	12	40
+	+	13	44
+
+> ~/grunt-demo/app.js
+	"	26	0
+	^	26	2
+	.	26	2
+	+	26	2
+
+> ~/grunt-demo/package.
+	"	1	0
+
+> ~/grunt-demo/util.js
+	"	7	19
+	^	7	20
+	.	7	19
+	+	1	23
+	+	3	40
+	+	4	31
+	+	6	35
+	+	7	27
+	+	6	4
+	+	7	19
+
+> ~/grunt-demo/test/util.test.js
+	"	1	4
+	^	6	41
+	.	6	40
+	+	3	50
+	+	4	32
+	+	5	0
+	+	8	2
+	+	7	4
+	+	5	24
+	+	6	40
+
+> ~/grunt-demo/test/index.html
+	"	15	25
+	^	15	26
+	.	15	25
+	+	12	44
+	+	11	26
+	+	15	25
+
+> ~/grunt-demo/rectangle.h
+	"	1	0
+
+> ~/grunt-demo/.tern-project
+	"	1	0
+
+> test/calc.test.js
+	"	1	0
+
+> ~/grunt-demo/test/calc.test.js
+	"	15	40
+	^	15	41
+	.	15	40
+	+	3	4
+	+	10	14
+	+	11	34
+	+	14	30
+	+	16	4
+	+	15	40
+
+> ~/grunt-demo/calc.js
+	"	3	13
+	^	3	14
+	.	3	13
+	+	8	0
+	+	3	13
+
+> ~/grunt-demo/test/calc.test,js
+	"	13	2
+	^	13	3
+	.	13	3
+	+	1	29
+	+	13	0
+	+	1	4
+	+	13	3
+
+> ~/grunt-demo/sun.js
+	"	12	31
+	^	12	32
+	.	12	32
+	+	3	29
+	+	4	25
+	+	5	17
+	+	8	30
+	+	9	30
+	+	12	32
+	+	14	18
+	+	14	54
+	+	14	15
+	+	14	0
+	+	14	53
+	+	14	0
+	+	11	32
+	+	12	32
+
+> ~/grunt-demo/.gitignore
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/grunt-demo/.eslintrc.json
+	"	24	9
+	^	24	10
+	.	19	36
+	+	18	14
+	+	19	36
+
+> ~/novel/cho4.md
+	"	3	57
+	^	3	60
+	.	3	57
+	+	3	57
+
+> ~/novel/SUMMARY.md
+	"	5	26
+	^	5	27
+	.	5	26
+	+	7	15
+	+	6	12
+	+	7	22
+	+	8	6
+	+	9	4
+	+	8	12
+	+	9	15
+	+	8	23
+	+	9	26
+	+	1	6
+	+	2	6
+	+	3	4
+	+	1	6
+	+	2	12
+	+	3	9
+	+	1	19
+	+	2	23
+	+	3	22
+	+	4	24
+	+	6	0
+	+	5	26
+
+> ~/novel/.git/COMMIT_EDITMSG
+	"	15	0
+
+> ~/novel/.gitignore
+	"	1	0
+	^	1	0
+	.	2	0
+	+	2	0
+	+	1	1
+	+	1	0
+	+	2	0
+
+> ~/novel/package.json
+	"	15	16
+	^	15	17
+	.	15	16
+	+	7	55
+	+	15	16
+	+	14	21
+	+	2	8
+	+	7	13
+	+	23	0
+	+	22	2
+	+	7	55
+	+	14	21
+	+	15	16
+
+> ~/novel/.travis.yml
+	"	17	11
+	.	11	0
+	+	1	17
+	+	33	11
+	+	23	0
+	+	27	0
+	+	22	0
+	+	17	11
+	+	6	0
+	+	7	0
+	+	11	0
+
+> ~/novel/ch03.md
+	"	3	57
+	^	3	60
+	.	3	57
+	+	5	105
+	+	3	57
+
+> ~/novel/README.md
+	"	3	9
+	^	3	12
+	.	3	9
+	+	6	0
+	+	5	15
+	+	1	8
+	+	3	9
+
+> ~/novel/ch01.md
+	"	3	45
+	^	3	48
+	.	3	45
+	+	5	0
+	+	1	11
+	+	5	105
+	+	5	9
+	+	1	13
+	+	3	45
+
+> ~/novel/ch02.md
+	"	3	33
+	^	3	36
+	.	3	33
+	+	1	7
+	+	5	87
+	+	3	33
+
+> ~/novel/ch04.md
+	"	3	117
+	^	3	120
+	.	3	117
+	+	3	117
+
+> ~/iBook/package.json
+	"	6	0
+	^	7	56
+	.	7	55
+	+	14	21
+	+	15	16
+	+	7	55
+
+> ~/iBook/ch04.md
+	"	3	441
+	^	3	444
+	.	3	441
+	+	4	0
+	+	1	14
+	+	3	441
+
+> ~/iBook/ch03.md
+	"	1	11
+	^	1	14
+	.	1	11
+	+	3	676
+	+	1	11
+
+> ~/iBook/ch02.md
+	"	3	216
+	^	3	219
+	.	3	216
+	+	5	15
+	+	3	24
+	+	1	8
+	+	3	216
+
+> ~/iBook/ch01.md
+	"	3	345
+	^	3	348
+	.	3	345
+	+	5	15
+	+	3	21
+	+	1	11
+	+	3	345
+
+> ~/iBook/README.md
+	"	3	16
+	^	3	19
+	.	3	19
+	+	5	41
+	+	3	38
+	+	1	9
+	+	3	49
+	+	1	1
+	+	1	0
+	+	2	0
+	+	1	9
+	+	3	19
+
+> ~/iBook/SUMMARY.md
+	"	5	18
+	^	5	18
+	.	5	15
+	+	1	21
+	+	6	22
+	+	7	20
+	+	1	6
+	+	2	6
+	+	3	4
+	+	1	6
+	+	2	9
+	+	3	9
+	+	1	19
+	+	2	20
+	+	3	22
+	+	4	22
+	+	5	20
+	+	2	12
+	+	3	9
+	+	4	12
+	+	5	15
+
+> ~/iBook/.git/COMMIT_EDITMSG
+	"	35	0
+
+> ~/grunt-demo/.csslintrc
+	"	2	0
+	^	2	13
+	.	2	13
+	+	1	1
+	+	2	13
+
+> ~/grunt-demo/.htmlhintrc
+	"	18	24
+	^	3	25
+	.	2	0
+	+	25	0
+	+	2	0
+
+> ~/grunt-demo/css/layout.less
+	"	35	0
+	^	35	1
+	.	35	0
+	+	35	0
+
+> ~/iBook/.travis.yml
+	"	11	4
+	.	7	0
+	+	1	0
+	+	1	0
+	+	1	39
+	+	1	41
+	+	1	78
+	+	1	11
+	+	1	0
+	+	1	36
+	+	1	38
+	+	1	76
+	+	1	17
+	+	17	11
+	+	6	0
+	+	11	0
+	+	7	0
+
+> ~/iBook/.gitignore
+	"	2	16
+	^	2	17
+	.	2	17
+	+	1	12
+	+	2	17
+	o	1	0
 
 > ~/node-demo/.gitignore
-	"	2	22
-	^	2	23
-	.	2	1
-	+	1	13
-	+	2	1
-
-> ~/node-demo/08-event/02-dog.js
-	"	35	20
-	^	34	0
-	.	35	20
-	+	2	0
-	+	2	52
-	+	2	26
-	+	2	20
-	+	2	31
-	+	2	17
-	+	2	24
-	+	2	14
-	+	2	26
-	+	2	29
-	+	2	20
-	+	2	18
-	+	2	9
-	+	2	7
-	+	2	7
-	+	36	0
-	+	3	52
-	+	5	28
-	+	9	32
-	+	13	0
-	+	14	0
-	+	15	40
-	+	20	0
-	+	21	50
-	+	25	21
-	+	27	38
-	+	29	44
-	+	35	20
-
-> ~/node-demo/08-event/02-play-dog.js
-	"	12	1
-	^	12	2
-	.	12	1
-	+	1	15
-	+	1	35
-	+	1	62
-	+	1	66
-	+	1	99
-	+	1	126
-	+	1	194
-	+	1	176
-	+	1	234
-	+	1	221
-	+	1	164
-	+	1	123
-	+	1	147
-	+	1	220
-	+	1	219
-	+	13	0
-	+	3	35
-	+	5	32
-	+	6	34
-	+	7	25
-	+	8	26
-	+	10	19
-	+	11	69
-	+	11	69
-	+	1	0
-	+	1	0
-	+	2	0
-	+	12	1
-
-> ~/node-demo/08-event/01-event-emitter.js
-	"	10	4
-	^	10	5
-	.	10	3
-	+	2	0
-	+	2	50
-	+	2	77
-	+	10	16
-	+	13	13
-	+	3	0
-	+	7	25
-	+	3	2
-	+	3	1
-	+	3	1
-	+	3	0
-	+	3	1
-	+	3	0
-	+	7	24
-	+	8	17
-	+	10	22
-	+	11	15
-	+	12	7
-	+	13	0
-	+	22	0
-	+	14	17
-	+	14	24
-	+	15	34
-	+	18	21
-	+	19	25
-	+	20	16
-	+	21	2
-	+	2	49
-	+	2	74
-	+	3	0
-	+	4	52
-	+	5	79
-	+	5	79
-	+	5	27
-	+	3	0
-	+	10	3
-
-> ~/node-demo/08-event/04-radio.js
-	"	10	8
-	^	10	8
-	.	10	7
-	+	3	52
-	+	3	51
-	+	21	0
-	+	3	52
-	+	6	0
-	+	10	7
-
-> ~/node-demo/08-event/04-listen-radio.js
 	"	1	0
 
-> ~/node-demo/08-event/03-listen-radio.js
-	"	3	27
-	^	3	28
-	.	3	26
-	+	2	0
-	+	3	39
-	+	7	15
-	+	8	18
-	+	11	31
-	+	13	28
-	+	13	28
-	+	21	0
-	+	18	30
-	+	14	4
-	+	4	23
-	+	14	54
-	+	15	19
-	+	17	28
-	+	17	28
-	+	18	28
-	+	19	54
-	+	3	26
+> ~/.vim/bundle/vimcdoc/doc/help.cnx
+	"	1	0
 
-> ~/node-demo/08-event/03-radio.js
-	"	12	20
-	^	12	21
-	.	12	17
-	+	2	0
-	+	3	52
-	+	4	29
-	+	6	24
-	+	21	20
-	+	7	26
-	+	9	18
-	+	11	15
-	+	15	14
-	+	11	18
-	+	12	21
-	+	15	18
-	+	16	22
-	+	12	27
-	+	16	27
-	+	12	17
+> ~/iBook/.git/objects/b9/78310551bb56b97c2c4d8145e8304feb3c91f6
+	"	1	0
 
-> ~/node-demo/07-module/02-export-var.js
-	"	4	0
-	^	4	23
-	.	4	23
-	+	4	22
-	+	3	19
-	+	4	23
-
-> ~/node-demo/07-module/02-export-function.js
-	"	19	23
-	^	13	14
-	.	5	35
-	+	2	0
-	+	3	0
-	+	3	24
-	+	4	18
-	+	5	36
-	+	8	20
-	+	9	10
-	+	9	31
-	+	14	17
-	+	19	23
-	+	18	19
-	+	14	16
-	+	9	30
-	+	5	35
-
-> ~/node-demo/07-module/02-export-object.js
-	"	3	0
-	^	16	22
-	.	16	21
-	+	2	0
-	+	13	1
-	+	4	26
-	+	5	35
-	+	7	28
-	+	8	27
-	+	10	30
-	+	11	19
-	+	15	20
-	+	16	21
-
-> ~/node-demo/07-module/02-main.js
-	"	23	0
-	^	27	35
-	.	27	32
-	+	1	16
-	+	3	40
-	+	6	14
-	+	5	19
-	+	6	17
-	+	2	1
-	+	8	50
-	+	10	14
-	+	9	0
-	+	9	0
-	+	10	0
-	+	9	0
-	+	10	51
-	+	11	55
-	+	12	19
-	+	7	1
-	+	14	48
-	+	18	6
-	+	17	0
-	+	17	0
-	+	18	51
-	+	19	43
-	+	20	46
-	+	28	0
-	+	22	0
-	+	13	1
-	+	21	1
-	+	24	44
-	+	24	49
-	+	26	33
-	+	28	0
-	+	27	32
-
-> ~/circle/index.js
-	"	4	0
-	^	4	1
-	.	3	41
-	+	2	51
-	+	3	41
-
-> ~/circle/lib/diameter.js
-	"	1	44
-	^	1	45
-	.	1	44
-	+	1	44
-	o	1	0
-
-> ~/circle/lib/area-cir.js
-	"	1	52
-	^	1	53
-	.	1	52
-	+	1	52
-	o	1	0
-
-> ~/node-demo/07-module/02-export-object-v2.js
-	"	17	28
-	^	17	29
-	.	18	0
-	+	3	0
-	+	14	0
-	+	5	3
-	+	9	3
-	+	13	3
-	+	10	0
-	+	6	0
-	+	3	0
-	+	4	2
-	+	5	0
-	+	7	0
-	+	8	2
-	+	9	0
-	+	11	0
-	+	12	2
-	+	13	0
-	+	16	26
-	+	11	17
-	+	7	7
-	+	3	7
-	+	18	0
-
-> ~/node-demo/07-module/package.json
-	"	7	2
-	^	14	17
-	.	14	16
-	+	13	20
-	+	14	16
-
-> ~/node-demo/07-module/01-third-module.js
-	"	7	0
-	^	7	60
-	.	7	59
-	+	2	31
-	+	5	33
-	+	6	36
-	+	7	59
-
-> ~/node-demo/06-buffer/04-bmp-info.js
-	"	10	36
-	^	10	37
-	.	10	36
-	+	6	9
-	+	3	23
-	+	6	46
-	+	4	21
-	+	8	36
-	+	9	37
-	+	10	36
-
-> ~/node-demo/06-buffer/03-data-uri.js
-	"	21	15
-	^	16	43
-	.	16	42
-	+	3	25
-	+	7	63
-	+	8	10
-	+	8	9
-	+	5	28
-	+	19	30
-	+	19	0
-	+	8	9
-	+	20	15
-	+	8	10
-	+	8	10
-	+	9	17
-	+	10	18
-	+	12	28
-	+	16	56
-	+	18	2
+> ~/rectangle/rectangle.js
+	"	21	8
+	^	20	40
+	.	20	37
+	+	2	5
+	+	4	38
+	+	5	44
+	+	6	55
+	+	7	66
+	+	8	64
+	+	11	78
+	+	13	93
+	+	14	103
+	+	16	105
+	+	19	131
+	+	20	134
+	+	22	126
+	+	2	12
+	+	4	6
+	+	5	6
+	+	6	6
+	+	7	6
+	+	8	6
+	+	9	6
+	+	10	6
+	+	11	6
+	+	12	6
 	+	13	6
-	+	14	2
-	+	15	2
-	+	16	4
-	+	13	2
+	+	14	10
+	+	15	6
+	+	16	6
+	+	17	6
+	+	18	6
+	+	19	6
+	+	20	6
+	+	21	6
+	+	22	0
+	+	22	2
+	+	26	0
+	+	11	55
+	+	2	13
+	+	3	0
 	+	12	0
-	+	17	2
-	+	9	1
-	+	8	10
-	+	9	1
-	+	8	11
+	+	23	32
+	+	23	93
+	+	23	93
+	+	25	0
+	+	24	0
+	+	19	42
+	+	20	37
+
+> ~/rectangle/index.html
+	"	27	6
+	^	25	40
+	.	25	39
+	+	1	0
 	+	9	0
+	+	5	13
+	+	9	17
+	+	27	7
+	+	5	22
+	+	6	47
+	+	25	30
+	+	24	68
+	+	9	9
+	+	9	0
+	+	10	15
+	+	11	19
+	+	13	15
+	+	14	18
+	+	15	6
+	+	16	21
+	+	18	15
+	+	21	7
+	+	19	43
+	+	22	38
+	+	22	40
+	+	17	0
+	+	16	48
+	+	24	62
+	+	25	39
+
+> ~/rectangle/rectangle.css
+	"	16	0
+	^	16	1
+	.	16	0
+	+	1	3
+	+	7	11
+	+	12	13
+	+	15	17
+	+	1	2
+	+	2	0
+	+	3	0
+	+	2	1
+	+	3	1
+	+	4	19
+	+	5	0
+	+	8	2
+	+	9	20
 	+	10	0
+	+	13	2
+	+	14	2
+	+	15	17
+	+	16	0
+
+> ~/dev-env/a.js
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+	+	2	0
+	+	1	0
+
+> /etc/sysconfig/network-scripts/ifcfg-ens32
+	"	20	0
+	^	18	19
+	.	18	18
+	+	16	17
+	+	18	18
+
+> ~/node-demo/16-http-client/04-crawler/222.js
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/node-demo/04-process/03-exit-code.js
+	"	1	0
+
+> ~/node-demo/18-express/02-static-web-server/index.js
+	"	3	0
+	^	3	0
+	.	5	16
+	+	1	35
+	+	2	22
+	+	4	29
+	+	5	16
+
+> ~/node-demo/18-express/06-todo-list/routes/index.js
+	"	8	37
+	^	8	38
+	.	8	37
+	+	11	34
+	+	12	30
+	+	4	14
+	+	12	53
+	+	13	39
+	+	10	0
+	+	9	0
+	+	8	37
+
+> ~/node-demo/18-express/06-todo-list/views/index.ejs
+	"	11	86
+	^	11	87
+	.	11	86
+	+	8	16
+	+	4	19
+	+	9	35
+	+	10	11
+	+	11	86
+
+> ~/node-demo/18-express/06-todo-list/views/error.ejs
+	"	1	0
+
+> ~/node-demo/18-express/06-todo-list/app.js
+	"	23	0
+	.	23	0
+	+	8	0
+	+	23	0
+
+> ~/node-demo/18-data-storage/03-mysql.js
+	"	43	19
+	^	43	20
+	.	56	40
+	+	3	31
+	+	4	0
+	+	5	34
+	+	6	27
+	+	7	30
+	+	8	30
+	+	9	13
+	+	12	14
+	+	15	73
+	+	16	49
+	+	17	22
+	+	18	48
+	+	19	45
+	+	21	61
+	+	24	58
+	+	25	0
+	+	26	0
+	+	27	43
+	+	28	40
+	+	31	32
+	+	32	15
+	+	36	77
+	+	37	14
+	+	38	36
+	+	39	29
+	+	42	37
+	+	46	68
+	+	47	28
+	+	48	50
+	+	49	43
+	+	52	51
+	+	56	40
+
+> ~/node-demo/18-data-storage/02-rest-api.js
+	"	112	0
+	^	112	1
+	.	50	2
+	+	4	27
+	+	5	31
+	+	7	33
+	+	8	29
+	+	9	22
 	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
+	+	12	23
+	+	13	29
+	+	16	42
+	+	17	49
+	+	19	56
+	+	20	58
+	+	22	65
+	+	23	73
+	+	29	0
+	+	30	16
+	+	32	19
+	+	33	37
+	+	35	63
+	+	36	69
+	+	37	60
+	+	38	26
+	+	42	27
+	+	43	18
+	+	44	51
+	+	45	0
+	+	46	29
+	+	47	66
+	+	48	42
+	+	49	21
+	+	54	24
+	+	55	33
+	+	56	0
+	+	57	21
+	+	61	31
+	+	63	58
+	+	65	0
+	+	67	39
+	+	69	16
+	+	70	33
+	+	71	39
+	+	77	27
+	+	78	33
+	+	79	0
+	+	80	21
+	+	84	20
+	+	85	58
+	+	86	57
+	+	87	0
+	+	88	41
+	+	90	0
+	+	92	51
+	+	94	24
+	+	95	40
+	+	96	51
+	+	99	17
+	+	104	21
+	+	105	0
+	+	106	57
+	+	107	30
+	+	108	40
+	+	110	28
+	+	114	28
+	+	115	58
+	+	116	21
+	+	117	0
+	+	118	2
+	+	4	4
+	+	5	4
+	+	9	4
+	+	11	4
+	+	12	5
+	+	13	7
+	+	14	8
 	+	16	0
 	+	17	0
-	+	18	11
-	+	17	3
-	+	18	3
-	+	9	19
-	+	10	3
-	+	11	10
-	+	12	28
-	+	13	5
-	+	14	11
-	+	15	3
-	+	8	11
-	+	21	16
-	+	16	5
-	+	10	8
-	+	7	41
-	+	7	41
-	+	7	40
-	+	16	46
-	+	18	12
-	+	10	17
-	+	8	11
-	+	16	42
-
-> ~/node-demo/06-buffer/01-basic.js
-	"	23	24
-	^	23	25
-	.	23	22
-	+	1	2
-	+	2	0
-	+	5	27
-	+	7	13
-	+	9	32
-	+	10	18
-	+	12	31
-	+	14	21
-	+	15	26
-	+	17	9
-	+	17	31
-	+	18	11
-	+	21	19
-	+	22	38
-	+	26	38
-	+	27	2
-	+	24	2
-	+	32	24
-	+	35	15
-	+	23	22
-
-> ~/node-demo/06-buffer/a.html
-	"	10	6
-	^	10	7
-	.	8	1
-	+	1	0
-	+	8	1
-
-> ~/node-demo/06-buffer/02-encode.js
-	"	9	13
-	^	9	14
-	.	7	13
-	+	3	24
-	+	4	27
-	+	3	23
-	+	5	28
-	+	7	29
-	+	9	38
-	+	10	35
-	+	7	13
-
-> ~/node-demo/06-buffer/02-decode.js
-	"	8	4
-	^	8	28
-	.	8	27
-	+	1	15
-	+	5	27
-	+	7	48
-	+	8	8
-	+	7	4
-	+	8	43
-	+	10	36
-	+	8	27
-
-> ~/node-demo/template.js
-	"	2	27
-	^	2	28
-	.	2	27
-	+	2	27
-
-> ~/node-demo/01-introduction/01-hello-world.js
-	"	1	0
-
-> ~/wd/tools/[Vundle] Installer
-	"	6	0
-	.	1	0
-	+	1	0
-
-> ~/.zshrc
-	"	90	0
-	^	76	0
-	.	75	69
-	+	43	114
-	+	43	141
-	+	43	142
-	+	43	205
-	+	43	246
-	+	43	247
-	+	43	335
-	+	43	397
-	+	43	460
-	+	43	519
-	+	44	0
-	+	20	0
-	+	10	18
-	+	29	0
-	+	54	31
-	+	63	16
-	+	66	0
-	+	54	16
-	+	72	71
-	+	73	55
-	+	74	27
-	+	75	69
-
-> ~/.gitconfig
-	"	8	0
-	.	8	0
-	+	8	0
-
-> ~/wd/courses/mocha/paper/01introduction.md
-	"	40	988
-	^	40	988
-	.	40	985
-	+	26	505
-	+	13	254
-	+	15	68
-	+	15	201
-	+	27	0
-	+	23	0
-	+	23	104
-	+	28	0
-	+	27	290
-	+	30	329
-	+	30	203
-	+	33	0
-	+	30	1374
-	+	32	126
-	+	32	1434
-	+	35	0
-	+	34	72
-	+	32	1874
-	+	32	1092
-	+	40	648
-	+	40	105
-	+	40	330
-	+	40	132
-	+	40	446
-	+	40	1012
-	+	3	26
-	+	8	19
-	+	15	201
-	+	17	16
-	+	23	123
-	+	25	26
-	+	26	134
-	+	27	0
-	+	27	0
-	+	26	0
-	+	27	0
-	+	26	397
-	+	26	565
-	+	27	0
-	+	30	146
-	+	30	468
-	+	30	774
-	+	30	1253
-	+	30	1421
-	+	32	1697
-	+	40	213
-	+	40	397
-	+	40	985
-
-> ~/wd/log/2017/2017-04.md
-	"	3	0
-	^	3	0
-	.	3	0
-	+	82	0
-	+	80	19
-	+	82	0
-	+	81	9
-	+	81	305
-	+	81	505
-	+	76	37
-	+	79	2
-	+	77	428
-	+	77	414
-	+	77	779
-	+	74	22
-	+	76	17
-	+	76	485
-	+	76	523
-	+	82	0
-	+	81	0
-	+	76	0
-	+	76	15
-	+	77	0
-	+	76	782
-	+	69	22
-	+	73	2
-	+	71	230
-	+	71	210
-	+	65	22
-	+	68	2
-	+	67	217
-	+	60	22
-	+	64	2
-	+	62	423
-	+	55	22
-	+	59	2
-	+	57	0
-	+	62	450
-	+	57	938
-	+	50	22
-	+	54	2
-	+	57	1269
-	+	52	1546
-	+	45	23
-	+	49	2
-	+	47	1019
-	+	52	1612
-	+	52	238
-	+	52	109
-	+	47	651
-	+	47	783
-	+	47	696
-	+	47	867
-	+	52	106
-	+	52	1564
-	+	47	1316
-	+	40	23
-	+	44	2
-	+	47	1948
-	+	47	192
-	+	47	1415
-	+	47	1733
-	+	42	120
-	+	47	2500
-	+	47	2671
-	+	42	1045
-	+	36	23
-	+	39	2
-	+	38	439
-	+	39	0
-	+	31	23
-	+	35	2
-	+	33	678
-	+	26	23
-	+	30	2
-	+	33	661
-	+	28	349
-	+	21	23
-	+	25	2
-	+	28	483
-	+	23	1045
-	+	16	23
-	+	16	23
-	+	20	2
-	+	18	379
-	+	11	23
-	+	15	2
-	+	13	594
-	+	6	23
-	+	10	2
-	+	8	161
-	+	1	23
-	+	5	2
-	+	3	0
-
-> 2017/2017-04.md
-	"	1	0
-
-> ~/wd/courses/mocha/task01.md
-	"	47	0
-	^	51	19
-	.	51	16
-	+	55	0
-	+	37	12
-	+	34	31
-	+	40	1
-	+	25	34
-	+	41	1
-	+	32	12
-	+	44	24
-	+	27	16
-	+	35	16
-	+	27	16
-	+	50	39
-	+	51	16
-
-> ~/wd/courses/mocha/README.md
-	"	27	0
-	^	27	59
-	.	27	0
-	+	1	36
-	+	3	0
-	+	29	0
-	+	3	37
-	+	9	82
-	+	9	0
-	+	7	37
-	+	8	46
-	+	14	0
-	+	12	37
-	+	13	46
-	+	12	116
-	+	13	116
 	+	18	0
 	+	19	0
-	+	17	31
-	+	18	31
+	+	20	0
+	+	21	0
 	+	22	0
+	+	23	0
 	+	24	0
-	+	26	45
-	+	26	42
-	+	27	24
-	+	29	0
-	+	29	0
-	+	22	18
-	+	29	0
-	+	28	0
-	+	8	100
-	+	13	119
-	+	17	34
-	+	18	34
+	+	25	0
+	+	26	0
 	+	27	0
-
-> ~/wd/courses/markdown/Task01.md
-	"	82	35
-	^	82	38
-	.	90	76
+	+	28	0
+	+	33	1
+	+	35	0
+	+	36	0
+	+	37	0
 	+	38	0
-	+	90	76
-
-> ~/wd/courses/seleniumIDE/README.md
-	"	47	0
-	.	45	0
-	+	26	0
-	+	45	0
-
-> ~/wd/courses/github/assignment.md
-	"	40	4
-	.	26	0
-	+	26	0
-
-> ~/wd/courses/7DTesting/README.md
-	"	196	0
-	.	131	0
-	+	131	0
-
-> ~/wd/courses/seleniumIDE/assignment3.md
-	"	102	2
-	.	71	0
-	+	71	0
-
-> ~/wd/courses/seIDEPracticeCase/README.md
-	"	13	26
-	.	1	0
-	+	1	0
-
-> ~/wd/courses/infoTheory/README.md
-	"	227	0
-	^	157	37
-	.	157	36
-	+	108	5
-	+	110	35
-	+	114	0
-	+	115	17
-	+	113	17
-	+	115	21
-	+	116	62
-	+	117	35
-	+	120	28
-	+	147	0
-	+	122	5
-	+	125	0
-	+	190	0
-	+	134	5
-	+	132	28
-	+	146	28
-	+	128	35
-	+	129	36
-	+	132	8
-	+	129	50
-	+	140	0
-	+	139	0
-	+	137	32
-	+	127	21
-	+	141	21
-	+	138	17
-	+	142	62
-	+	143	24
-	+	146	8
-	+	148	8
-	+	161	0
-	+	162	8
-	+	189	0
-	+	176	8
-	+	221	37
-	+	220	21
-	+	206	21
-	+	207	35
-	+	193	21
-	+	194	36
-	+	181	37
-	+	182	42
-	+	169	36
-	+	157	36
-
-> ~/wd/courses/github/paper/S09/02setup.md
-	"	25	28
-	^	5	157
-	.	5	154
-	+	1	0
-	+	3	0
-	+	11	0
-	+	23	0
-	+	32	0
 	+	43	0
-	+	53	0
-	+	7	66
-	+	5	154
+	+	44	0
+	+	45	0
+	+	46	1
+	+	47	2
+	+	48	2
+	+	49	2
+	+	50	2
 
-> ~/wd/auto/index.js
-	"	30	2
-	^	49	4
-	.	34	0
-	+	34	66
-	+	34	57
-	+	34	0
-	+	34	57
-	+	34	6
-	+	34	62
-	+	34	0
-	+	34	0
-	+	34	10
-	+	34	2
-	+	34	41
-	+	34	57
-	+	34	0
-	+	34	62
-	+	34	3
-	+	34	0
-	+	34	63
-	+	34	44
-	+	34	57
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	74
-	+	34	0
-	+	34	45
-	+	34	0
-	+	34	42
-	+	34	0
-	+	34	0
-	+	34	6
-	+	34	0
-	+	34	46
-	+	34	23
-	+	34	6
-	+	34	3
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	7
-	+	34	0
-	+	34	4
-	+	34	19
-	+	34	23
-	+	34	7
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	6
-	+	34	16
-	+	34	42
-	+	34	0
-	+	34	25
-	+	34	0
-	+	34	37
-	+	34	36
-	+	34	37
-	+	34	8
-	+	34	85
-	+	34	88
-	+	34	30
-	+	34	30
-	+	34	26
-	+	34	9
-	+	34	9
-	+	34	10
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	3
-	+	34	3
-	+	34	48
-	+	34	20
-	+	34	24
-	+	34	20
-	+	34	2
-	+	22	52
-	+	22	50
-	+	22	23
-	+	23	22
-	+	24	6
-	+	22	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	34	0
-	+	22	32
-	+	22	0
-	+	22	47
-	+	22	0
-	+	22	33
-	+	22	0
-	+	22	0
-	+	1	0
-	+	22	0
-	+	34	0
-
-> ~/wd/courses/infoTheory/REA
-	"	1	0
-
-> ~/wd/courses/.git/COMMIT_EDITMSG
-	"	4	15
-	^	4	16
-	.	4	15
-	+	4	15
-
-> ~/wd/courses/.git/rebase-merge/git-rebase-todo
-	"	2	0
-	^	2	1
-	.	2	1
-	+	1	3
-	+	2	1
-
-> ~/wd/demo-code/mocha-demo/demo3/cal.js
-	"	1	0
-	^	22	35
-	.	1	0
-	+	1	30
+> ~/node-demo/18-express/04-basic-router/index.js
+	"	46	1
+	^	46	2
+	.	44	2
+	+	1	34
+	+	49	22
+	+	51	37
+	+	52	36
+	+	51	32
+	+	52	42
+	+	53	46
+	+	54	49
+	+	1	34
+	+	49	22
+	+	49	38
+	+	49	26
+	+	49	20
+	+	49	8
+	+	49	38
+	+	49	38
+	+	49	38
+	+	49	37
+	+	49	13
+	+	49	17
+	+	49	20
+	+	49	27
+	+	49	20
+	+	49	15
+	+	49	18
+	+	49	25
+	+	49	0
+	+	1	35
+	+	2	22
+	+	4	29
+	+	5	22
+	+	6	13
+	+	10	29
+	+	11	22
+	+	12	13
+	+	16	49
+	+	17	22
+	+	18	13
+	+	20	23
+	+	21	22
+	+	22	21
+	+	22	17
+	+	25	37
+	+	26	42
+	+	27	16
+	+	27	13
+	+	30	41
+	+	31	33
+	+	32	0
+	+	35	44
+	+	36	38
+	+	37	22
+	+	38	0
+	+	41	51
+	+	42	42
+	+	43	46
+	+	44	24
+	+	45	0
+	+	48	16
+	+	5	1
+	+	6	2
+	+	11	2
+	+	12	2
+	+	17	2
+	+	18	2
+	+	21	2
+	+	22	17
 	+	23	0
-	+	1	0
+	+	26	2
+	+	27	13
+	+	28	0
+	+	27	2
+	+	31	2
+	+	36	2
+	+	37	2
+	+	42	2
+	+	43	2
+	+	44	2
 
-> ~/wd/note/office/vim.md
-	"	221	9
-	^	272	64
-	.	272	61
-	+	119	15
-	+	120	24
-	+	122	1
-	+	119	18
-	+	118	21
-	+	122	0
-	+	264	3
-	+	263	19
-	+	265	20
-	+	264	29
-	+	265	84
-	+	268	1
-	+	266	140
-	+	255	38
-	+	272	61
+> ~/node-demo/18-express/03-quick-start/app.js
+	"	41	20
 
-> ~/wd/demo-code/mocha-demo/demo3/mocha.opts
+> ~/node-demo/18-express/01-hello-world/index.js
+	"	8	16
+	^	8	17
+	.	8	16
+	+	1	35
+	+	2	22
+	+	4	30
+	+	5	24
+	+	8	16
+
+> ~/node-demo/18-data-storage/b.txt
 	"	1	10
 	^	1	11
-	.	2	0
-	+	2	0
-
-> ~/wd/demo-code/mocha-demo/demo2/test/add.test.js
-	"	24	2
-	^	22	40
-	.	22	39
-	+	2	0
-	+	21	30
-	+	22	39
-
-> ~/wd/demo-code/mocha-demo/demo2/test/dir/multiply.test.js
-	"	6	25
-	^	6	26
-	.	6	25
-	+	6	25
-
-> ~/wd/demo-code/mocha-demo/demo2/cal.js
-	"	1	0
-
-> ~/wd/demo-code/mocha-demo/.tern-project
-	"	9	0
-	^	6	37
-	.	7	0
-	+	2	11
-	+	2	11
-	+	7	0
-	+	6	37
-	+	7	0
-
-> ~/wd/auto/index
-	"	1	0
-
-> ~/wd/auto/andex2.js
-	"	2	0
-	.	3	0
-	+	1	73
-	+	1	34
-	+	1	19
-	+	1	25
-	+	1	28
-	+	1	29
-	+	1	25
-	+	1	26
-	+	1	25
-	+	1	16
-	+	1	0
-	+	1	0
-	+	1	31
-	+	1	29
+	.	1	5
 	+	1	5
-	+	1	31
-	+	1	0
-	+	1	17
-	+	1	37
-	+	1	0
-	+	1	0
-	+	1	24
-	+	1	31
-	+	1	32
-	+	1	35
-	+	1	9
-	+	1	0
-	+	1	29
-	+	1	9
-	+	1	44
-	+	1	1
-	+	1	24
-	+	1	0
-	+	1	29
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	28
-	+	1	52
-	+	1	14
-	+	1	48
-	+	1	48
-	+	1	22
-	+	1	17
-	+	1	0
-	+	1	2
-	+	1	19
-	+	1	12
-	+	1	8
-	+	1	0
-	+	1	0
-	+	1	19
-	+	1	32
-	+	3	0
 
-> ~/wd/auto/.tern-project
-	"	9	6
-	^	9	62
-	.	9	61
-	+	10	48
-	+	9	61
+> ~/node-demo/18-data-storage/a.txt
+	"	1	10
+	^	1	11
+	.	1	5
+	+	1	5
 
-> office/vim.md
-	"	1	0
-
-> ~/wd/courses/github/README.md
-	"	95	156
-	^	127	0
-	.	136	0
-	+	21	64
-	+	22	13
-	+	23	13
-	+	24	13
-	+	25	13
-	+	22	54
-	+	23	54
-	+	24	54
-	+	25	57
-	+	1	0
-	+	126	203
-	+	128	0
-	+	136	0
-
-> ~/wd/log/taskList.md
-	"	1	0
-	.	75	0
-	+	9	0
-	+	75	0
-
-> ~/wd/log/tasklist.md
-	"	1	0
-
-> ~/wd/tasklist.md
-	"	1	0
-
-> ~/mk-exercise/heading.md
-	"	2	0
-	^	2	0
-	.	1	22
-	+	1	22
-
-> ~/mk-exercise/hello.md
-	"	1	12
-	^	1	13
-	.	2	0
-	+	2	0
-
-> ~/wd/courses/github/paper/S06/03htm-intro.md
-	"	58	108
-	^	58	111
-	.	58	108
-	+	5	366
-	+	7	618
-	+	9	261
-	+	11	7
-	+	12	11
-	+	15	116
-	+	16	19
-	+	19	52
-	+	21	117
-	+	20	3
-	+	25	0
-	+	21	0
-	+	21	580
-	+	21	172
-	+	21	475
-	+	22	0
-	+	23	612
-	+	62	459
-	+	64	255
-	+	53	69
-	+	54	15
-	+	48	3
-	+	52	7
-	+	54	15
-	+	55	3
-	+	56	222
-	+	58	108
-
-> ~/wd/webdriver-demo/package.json
-	"	20	4
-	^	14	19
-	.	20	0
-	+	13	20
-	+	14	16
-	+	14	16
-	+	14	18
-	+	20	0
-
-> ~/wd/webdriver-demo/search.js
-	"	20	0
-	^	20	14
-	.	20	0
-	+	10	31
-	+	11	0
-	+	12	45
-	+	13	38
-	+	21	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	14	57
-	+	1	35
-	+	21	49
-	+	21	67
-	+	21	12
-	+	1	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	17	9
-	+	1	10
-	+	17	41
-	+	20	15
-	+	20	0
-
-> ~/wd/webdriver-demo/.tern-project
-	"	8	47
-	^	8	48
-	.	8	47
-	+	3	0
-	+	9	46
-	+	7	61
-	+	8	47
-
-> ~/wd/webdriver-demo/hello/hello.js
-	"	1	0
-	^	1	2
-	.	1	1
-	+	1	1
-
-> ~/wd/courses/seleniumIDE/assignment2.md
-	"	15	2
-	^	15	3
-	.	15	2
-	+	15	2
-
-> ~/wd/webdriver-demo/.gitignore
-	"	40	12
-	^	40	13
-	.	40	12
-	+	40	12
-
-> ~/wd/courses/seleniumIDE/assignment1.md
-	"	1	0
-	.	52	0
-	+	26	53
-	+	17	6
-	+	30	23
-	+	20	0
-	+	19	59
-	+	31	60
-	+	21	0
-	+	42	16
-	+	17	9
-	+	18	12
-	+	19	12
-	+	30	9
-	+	31	8
-	+	41	9
-	+	42	3
-	+	18	18
-	+	19	18
-	+	31	13
-	+	42	69
-	+	51	0
-	+	52	0
-
-> ~/wd/note/testing/SeleniumIDE.md
-	"	21	32
-
-> ~/.vimrc
-	"	72	1
-	^	72	22
-	.	33	33
-	+	67	0
-	+	62	21
-	+	63	16
-	+	64	21
-	+	66	0
-	+	22	0
-	+	21	0
-	+	20	0
-	+	19	41
-	+	1	1
-	+	5	0
-	+	6	0
-	+	8	0
-	+	7	0
-	+	19	0
-	+	18	0
-	+	17	0
-	+	19	0
-	+	21	0
+> ~/node-demo/18-data-storage/01-static-web-server.js
+	"	19	1
+	^	19	2
+	.	19	2
+	+	2	29
+	+	3	31
+	+	4	13
+	+	6	30
+	+	7	40
 	+	10	30
-	+	10	27
-	+	16	17
-	+	57	0
-	+	21	0
-	+	21	0
-	+	74	0
-	+	75	0
-	+	84	90
-	+	86	22
-	+	84	0
-	+	79	12
-	+	78	16
-	+	79	16
-	+	82	18
-	+	67	0
-	+	66	0
-	+	82	18
-	+	65	0
-	+	77	77
-	+	85	0
-	+	83	18
-	+	84	8
-	+	85	8
-	+	81	0
-	+	11	30
-	+	24	29
-	+	25	43
-	+	31	31
-	+	32	52
-	+	33	47
-	+	36	13
-	+	15	24
-	+	10	0
-	+	14	0
-	+	13	26
-	+	88	0
-	+	74	0
-	+	73	0
-	+	72	21
-	+	32	42
-	+	33	33
-
-> ~/wd/note/linux/centOS.md
-	"	374	0
-	^	373	2
-	.	373	2
-	+	93	48
-	+	94	14
-	+	83	93
-	+	86	0
-	+	83	7
-	+	79	37
-	+	79	58
-	+	86	0
-	+	85	63
-	+	321	30
-	+	320	19
-	+	323	51
-	+	322	31
-	+	321	31
-	+	320	31
-	+	325	86
-	+	326	60
-	+	318	28
-	+	332	50
-	+	333	26
-	+	335	14
-	+	335	32
-	+	336	3
-	+	81	29
-	+	80	63
-	+	102	19
-	+	386	1
-	+	384	104
-	+	385	88
-	+	388	1
-	+	387	34
-	+	399	26
-	+	402	32
-	+	407	74
-	+	342	7
-	+	343	6
-	+	344	15
-	+	360	0
-	+	359	159
-	+	367	36
-	+	365	16
-	+	279	99
-	+	282	0
-	+	372	21
-	+	371	6
-	+	373	2
-
-> ~/wd/info-theory-lab-c/capacity/capacity.c
-	"	204	0
-	.	32	0
-	+	33	0
-	+	55	0
-	+	54	10
-	+	52	0
-	+	29	0
-	+	32	0
-
-> ~/wd/courses/github/paper/S06/02open-source.md
-	"	70	0
-	^	17	9
-	.	17	6
-	+	35	6
-	+	39	211
-	+	54	78
-	+	59	82
-	+	61	95
-	+	61	83
-	+	63	69
-	+	59	60
-	+	67	123
-	+	71	594
-	+	73	1380
-	+	81	96
-	+	5	37
-	+	5	280
-	+	15	117
-	+	17	66
-	+	28	7
-	+	29	21
-	+	32	4
-	+	37	171
-	+	39	238
-	+	61	63
-	+	63	12
-	+	69	198
-	+	71	147
-	+	71	282
-	+	71	375
-	+	71	474
-	+	73	30
-	+	73	300
-	+	73	639
-	+	73	876
-	+	73	1056
-	+	73	1158
-	+	73	1323
-	+	80	303
-	+	80	138
-	+	80	309
-	+	75	495
-	+	78	12
-	+	9	87
-	+	12	57
-	+	12	303
-	+	17	6
-
-> ~/nodejs-debug/hello-word-debug.js
-	"	9	0
-	^	9	0
-	.	8	25
-	+	8	25
-
-> ~/nodejs-debug/.tern-project
-	"	1	0
-
-> ~/wd/note/office/win10.md
-	"	54	63
-	^	54	64
-	.	54	42
-	+	4	0
-	+	3	0
-	+	3	0
-	+	54	42
-
-> ~/wd/auto/tasklist.md
-	"	4	22
-	^	4	25
-	.	4	22
-	+	3	22
-	+	5	21
-	+	4	22
-
-> ~/wd/auto/.gitignore
-	"	3	0
-	^	3	0
-	.	2	13
-	+	2	13
+	+	11	45
+	+	13	0
+	+	14	41
+	+	15	62
+	+	19	47
+	+	20	0
+	+	21	15
+	+	7	1
+	+	9	1
+	+	10	2
+	+	11	2
+	+	13	2
+	+	14	3
+	+	15	4
+	+	16	2
+	+	17	2
+	+	19	2
